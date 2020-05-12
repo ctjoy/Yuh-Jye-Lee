@@ -1,0 +1,28 @@
+{% extends "homepage/base.html" %}
+{% block content %}
+{% load static %}
+<h2 class="underline">Lab Reading List</h2>
+<ul>
+    <li><a href="{% static 'assets/file/reading_list/computational_thinking.pdf' %}">Wing, Jeannette M. "Computational thinking." Communications of the ACM 49.3 (2006): 33-35</a></li>
+    <li><a href="{% static 'assets/file/reading_list/a_few_usingful_things_to_know_about_machine_learning.pdf' %}">Domingos, Pedro. "A few useful things to know about machine learning." Communications of the ACM 55.10 (2012): 78-87.</a></li>
+    <li><a href="{% static 'assets/file/reading_list/data_science_and_prediction.pdf' %}">Dhar, Vasant. "Data science and prediction." Communications of the ACM 56.12 (2013): 64-73.</a></li>
+    <li><a href="{% static 'assets/file/reading_list/data_science_and_its_relationship.pdf' %}">Provost, Foster, and Tom Fawcett. "Data science and its relationship to big data and data-driven decision making." Big Data 1.1 (2013): 51-59.</a></li>
+</ul>
+<h2 class="underline">Toolboxes</h2>
+<ul>
+    <li><a href="https://github.com/dsmilab/ssvm">Smooth Support Vector Machine Toolbox</a></li>
+    <li><a href="https://github.com/dsmilab/KStat">Kernel Statistics Toolbox</a></li>
+    <li><a href="https://github.com/dsmi-lab-ntust/AnomalyDetectionToolbox">Anomaly Detection Toolbox</a></li>
+    <li><a href="https://github.com/fnaith/mpi_data_tool">MPI Toolbox</a></li>
+</ul>
+<h2 class="underline">Datasets</h2>
+{% for dataset in datasets %}
+    <h3>{{ dataset.title }}</h3>
+    <p>{{ dataset.description }}</p>
+    <ul>
+        {% for file in dataset.file_set.all %}
+        <li><a href="{% static file.link %}">{{ file.label }}</a></li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+{% endblock %}
