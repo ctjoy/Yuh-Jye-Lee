@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Yuh Jye Lee</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
-<link rel="stylesheet" type="text/css" href="assets/css/main.css">
-<link href="https://fonts.googleapis.com/css?family=Allerta|Hammersmith+One" rel="stylesheet">
+    <title>DSMI</title>
+    {% load static %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/normalize.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/main.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Allerta|Hammersmith+One" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-  <section class="header">
-    <h1 class="text-center"><a href="index.html" id="name">Yuh Jye Lee</a></h1>
-  </section>
-  <nav>
-    <div class="menuToggle menuToggle-m">
-      <input type="checkbox" />
-      <span></span>
-      <span></span>
-      <span></span>
-      <ul class="menu menu-m text-center">
-        <li><a href="#">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="">Lab</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="downloads.html">Download</a></li>
-      </ul>
-    </div>
-  </nav>
+    <section class="header">
+        <h1 class="text-center"><a href="/" id="name">Data Science and Machine Intelligence Lab</a></h1>
+    </section>
+    <nav>
+        <div class="menuToggle menuToggle-m">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul class="menu menu-m text-center">
+                <li><a href="/Yuh-Jye-Lee/">Yuh Jye Lee</a></li>
+                <li><a href="/member/">Member</a></li>
+                <li><a href="/downloads/">Downloads</a></li>
+            </ul>
+        </div>
+    </nav>
   <h2 class="underline">Lab Reading List</h2>
   <ul>
       <li><a href="{% static 'assets/file/reading_list/computational_thinking.pdf' %}">Wing, Jeannette M. "Computational thinking." Communications of the ACM 49.3 (2006): 33-35</a></li>
