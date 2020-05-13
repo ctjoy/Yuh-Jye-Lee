@@ -43,12 +43,10 @@
   </ul>
   <h2 class="underline">Datasets</h2>
   {% for dataset in datasets %}
-      <h3>{{ dataset.title }}</h3>
+      <h3>Cardiac Arrhythmia Database</h3>
       <p>{{ dataset.description }}</p>
       <ul>
-          {% for file in dataset.file_set.all %}
-          <li><a href="{% static file.link %}">{{ file.label }}</a></li>
-          {% endfor %}
+        <li><a href="{% static '/dataset/Arrhythmia.mat' %}">Distinguish between the presence and absence of cardiac arrhythmia and classify it in one of the 16 groups</a></li>
       </ul>
   </div>
   </body>
